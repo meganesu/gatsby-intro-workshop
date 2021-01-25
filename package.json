@@ -1,5 +1,5 @@
 {
-  "name": "intro-to-gatsby-workshop-gatsby-conf-2021",
+  "name": "gatsby-intro-workshop",
   "version": "1.0.0",
   "private": true,
   "description": "Intro to Gatsby Workshop - GatsbyConf 2021",
@@ -15,7 +15,10 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "gatsby": "^2.26.1",
+    "gatsby-plugin-mdx": "^1.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

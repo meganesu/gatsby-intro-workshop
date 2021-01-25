@@ -1,0 +1,22 @@
+{
+  "name": "intro-to-gatsby-workshop-gatsby-conf-2021",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Intro to Gatsby Workshop - GatsbyConf 2021",
+  "author": "Megan Sullivan",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^2.26.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

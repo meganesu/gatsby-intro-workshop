@@ -2,17 +2,26 @@
 title: Intro to Gatsby Workshop - GatsbyConf 2021
 ---
 
-import TutorialList from '../components/tutorial-list'
+import TutorialList from "../components/tutorial-list";
 
 Welcome to the Intro to Gatsby Workshop!
 
 Prior to the workshop, please go through Part 0 to make sure you have all the necessary tools installed.
 
-<TutorialList 
-  posts={[
-    {
-      title: "Part 0",
-      description: "Install things"
-    }
-  ]}
+<TutorialList
+  posts={props.data.allMdx.nodes}
 />
+
+export const query = graphql`
+{
+  allMdx(sort: {fields: slug}) {
+    nodes {
+      slug
+      frontmatter {
+        title
+        description
+      }
+    }
+  }
+}
+`

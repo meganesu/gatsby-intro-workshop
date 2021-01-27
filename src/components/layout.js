@@ -5,6 +5,7 @@ const pageStyles = {
   color: "#232129",
   padding: "96px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  lineHeight: "1.5rem",
 }
 const headingStyles = {
   marginTop: 0,

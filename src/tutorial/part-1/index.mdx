@@ -1,32 +1,72 @@
 ---
-title: "Part 1: Create your first Gatsby site"
+title: "Part 1: Create and deploy your first Gatsby site"
 description: "Make your project"
 sort_order: 1
 ---
 
 ## Introduction
 
-* "In the previous section, you learned..." Refresh their knowledge for anything they’ve learned in the previous sections that will be relevant to this part.
+Now that you've set up your computer with all the tools you'll need, it's time to get started!
+
+In this section, you will go through the process of creating and deploying your first Gatsby site.
+
 * Brief paragraph (2-3 sentences) to highlight context and relevance.
 * Explain the goal of this part of the tutorial. Show diagrams, list acceptance criteria for desired end result.
 
 ## What You Will Learn
 
-* Bullet list of learning objectives (should link to the headings for the corresponding step). Focus on transferable skills.
+By the end of this section, you will be able to:
+
+* Create a new Gatsby site.
+* Deploy your site using Gatsby Hosting.
 
 ## Agenda
 
 * Bullet list to show the big picture of the steps in this part
-* Callout box with a link to starter branch for this section (so they can catch up if they haven’t been following along). "If you haven't done the previous sections of the Tutorial, you can still follow along from here. Clone the [whatever we call it] repo and check out the branch called `name-of-branch`."
 
 ## Learning Guide
 
-* Ordered list of steps
-* Last step should always be to commit your changes
+
+### Step 1: Create your first Gatsby site
+
+1. `cd` into the folder where you want to your site to live
+1. `gatsby new` (or `npm init gatsby` if you don't have gatsby globally installed)
+    * This brings up an interactive CLI wizard. It makes setting up new projects with specific integrations easier.
+		* We're going to add our own integrations from scratch, so for now you can just say "No" to those options.
+		* After you enter your initial site details, the wizard will create your new Gatsby site and install its dependencies.
+1. `cd` into the folder for your project (whatever you gave the wizard).
+1. `gatsby develop` (or `npm run develop`) to start up the local dev server.
+1. Open `localhost:8000` in a browser. There's your site! It says to edit `src/pages/index.js` to see updates. Sounds like a good place to start! New objective: update `src/pages/index.js`.
+1. Time to take a closer look at the actual code for your site. Open up the project in VS Code (or your IDE of choice) to see what the wizard created for you. Quick tour (or skip the tour until the information becomes relevant):
+		* README with some links to helpful resources (docs)
+		* package.json and package-lock.json with information about your project, commands you can run, dependencies (comes from Node.js)
+		* gatsby-config.js, a Gatsby file! Where your site configuration will live. Right now, it just has some site metadata (info about your site).
+		* public/ directory. This is where your site goes after you build it.
+		* src/pages. This is where your pages live.
+1. Back to the task at hand. The home page said to edit `src/pages/index.js`. Open the file and do it!
+    * Quick high level of what's in `src/pages/index.js`. Styles, some data, and then the actual DOM structure of the page. (We'll talk more about the React syntax in a bit, so don't worry if it looks confusing.)
+		* Change the text in the h1. Save your file, see the site rebuild in the terminal window, and see your changes appear in the browser.
+
+### Step 2: Deploy your site with Gatsby Hosting
+
+Cool, you have a Gatsby site now! But no one can see it. How do we make our site available on the internet so that everyone can see it? Answer: hosting.
+
+You'll use Gatsby Hosting to make your site available on the web.
+
+1. Commit your changes
+1. Create a new repo in GitHub
+1. Push your changes to GitHub
+1. Log into Gatsby Cloud
+1. Give Gatsby Cloud access to your GitHub repo. Site will build automatically. You get a unique URL for each build. But that URL isn't human readable. It would be great to have a cleaner URL. Luckily, you can get one, with Gatsby Hosting!
+1. Turn on Gatsby Hosting
+1. Set up the site prefix
+1. Wait for your build to deploy, and then check out your URL!
+
+Every time you push a new change to your GitHub repo (the main branch), Gatsby Cloud will see the changes, build a new version of your site, and deploy it to your site URL.
 
 ### Challenge (extra credit)
 
-* Ideas for how they can take what they learned in this part a step further
+* Add a custom domain (link to Hosting docs)
 
 ## Summary
 

@@ -56,8 +56,24 @@ You'll use Gatsby Hosting to make your site available on the web.
 1. Commit your changes
 1. Create a new repo in GitHub
 1. Push your changes to GitHub
-1. Log into Gatsby Cloud
-1. Give Gatsby Cloud access to your GitHub repo. Site will build automatically. You get a unique URL for each build. But that URL isn't human readable. It would be great to have a cleaner URL. Luckily, you can get one, with Gatsby Hosting!
+    ```shell
+		git remote add origin https://github.com/<username>/<repo>.git
+		git branch -M main
+		git push -u origin main
+		```
+1. Log into Gatsby Cloud with your GitHub account: https://www.gatsbyjs.com/dashboard/login/
+1. Add a new site to your Gatsby Cloud account. Click purple "Add a site" button on the right.
+1. "Import from a Git repository." Click Next.
+    * Git Provider: GitHub
+		* Organization: Your GitHub username (Username not listed? Click "Add new Organization")
+		* Repository: Your new GitHub repo (Only giving access to select repos? Use the dropdown to find the name of your new repo, then click "Save".)
+		* Base branch: main (leave as default)
+		* Base directory: / (leave as default)
+		* Site name: name of repo + branch (leave as default)
+		* Integrations. Skip this for now.
+		* Setup. (This is for env vars.) Skip this for now. Click "Create site"
+1. Gatsby Cloud will start a build for your site automatically. There will be a unique URL for each build, and a URL that always has the latest build.
+1. If you want to set up a custom domain, you can use Gatsby Hosting!
 1. Turn on Gatsby Hosting
 1. Set up the site prefix
 1. Wait for your build to deploy, and then check out your URL!

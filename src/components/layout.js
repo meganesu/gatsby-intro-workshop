@@ -10,6 +10,7 @@ const pageStyles = {
 const headingStyles = {
   marginTop: 0,
   marginBottom: "2rem",
+  lineHeight: "1.25em",
 }
 
 const Layout = ({children, pageContext}) => (

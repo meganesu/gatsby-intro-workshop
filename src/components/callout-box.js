@@ -5,7 +5,7 @@ const CalloutBox = ({children}) => (
 		backgroundColor: 'lightblue',
 		padding: '0.5rem 1rem',
 	}}>
-		{children}
+		{children} 
 	</aside>
 )
 

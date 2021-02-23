@@ -59,7 +59,35 @@ Here's the general process of using a plugin in your site:
 
 You can use the `gatsby-plugin-image` plugin to add performant images to your site.
 
+The `gatsby-plugin-image` plugin exports a component that you can use to load images from a remote URL or your local file system: `<StaticImage>`.
 
+#### Step 1: Install `gatsby-plugin-image` and dependencies
+
+To use the `<StaticImage>` component, you'll also need to install a few other plugins:
+
+* `gatsby-plugin-sharp`: Handles the actual image processing that is used by `gatsby-plugin-image`.
+* `gatsby-source-filesystem`: Lets you pull in data from your filesystem. (You'll learn more about this plugin later. Just install it for now.)
+
+#### Step 2: Configure `gatsby-plugin-image` and dependencies
+
+When you configure your plugins in the `gatsby-config.js` file, you only need to add `gatsby-plugin-image` and `gatsby-plugin-sharp`. You'll configure `gatsby-plugin-filesystem` later on in the workshop.
+
+#### Step 3: Use the `<StaticImage>` component
+
+The `<StaticImage>` component takes two props:
+
+* `src`: The URL to the image you want to load. (This is the same as what you put in the `src` attribute of an `<img>` element.)
+* `alt`: The alt text to describe the image. This gets used by screen readers or if there's a problem loading the image.
+
+There are also additional options that you can pass in to control the image size or loading behavior. For the full list of options, refer to the [Reference Guide for `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/) in the Gatsby documentation.
+
+#### Additional Resources
+
+You might find these docs useful:
+
+* [How-To Guide: Using `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/how-to/images-and-media/using-gatsby-plugin-image/) - Step-by-step instructions on how to use the `<StaticImage>` component.
+* [Reference Guide: `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/) - A detailed reference on the properties available in the `<StaticImage>` API.
+* [Plugin README for `gatsby-plugin-image`](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
 
 ## Exercise #1: Add `gatsby-plugin-image`
 

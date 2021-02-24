@@ -1,13 +1,14 @@
 ---
-title: Intro to Gatsby Workshop - GatsbyConf 2021
+title: "Intro to Gatsby Workshop"
+eyebrow: "GatsbyConf 2021"
 ---
 
-import { Link } from 'gatsby'
-import TutorialList from '../components/tutorial-list'
+import { Link } from "gatsby";
+import TutorialList from "../components/tutorial-list";
 
 Welcome to the Intro to Gatsby Workshop!
 
-The slides for this workshop are available here: [Google Slides - Intro to Gatsby Workshop](https://docs.google.com/presentation/d/1hDQkrkYYSw_gqfoLFk59IA9eNiQlFYT3tfAnNkIiNfk/)
+The slides for this workshop are available on [Google Slides](https://docs.google.com/presentation/d/1hDQkrkYYSw_gqfoLFk59IA9eNiQlFYT3tfAnNkIiNfk/).
 
 ## Prerequisites
 
@@ -19,20 +20,19 @@ New to React? We’ll cover the basics in the workshop. But if you want to prep 
 
 ## Curriculum
 
-<TutorialList
-  posts={props.data.allMdx.nodes}
-/>
+<TutorialList posts={props.data.allMdx.nodes} />
 
 export const query = graphql`
-{
-  allMdx(sort: {fields: frontmatter___sort_order}) {
-    nodes {
-      slug
-      frontmatter {
-        title
-        description
+  {
+    allMdx(sort: { fields: frontmatter___sort_order }) {
+      nodes {
+        slug
+        frontmatter {
+          title
+          description
+          eyebrow
+        }
       }
     }
   }
-}
-`
+`;

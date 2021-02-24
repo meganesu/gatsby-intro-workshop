@@ -1,25 +1,28 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx, Text } from 'theme-ui';
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "1rem",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-  lineHeight: "1.5rem",
-  maxWidth: "560px",
-  margin: "auto",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: "2rem",
-  lineHeight: "1.25em",
-};
+const bodyStyles = {
+  fontFamily: 'body',
+}
+
+const eyebrowStyles = {
+  color: 'primary',
+  display: 'inline-block',
+  textTransform: 'uppercase',
+  fontSize: 2,
+  fontWeight: 'medium',
+  bg: 'purple10',
+  py: 0,
+  px: 2,
+  borderRadius: '20px'
+}
 
 const Layout = ({ children, pageContext }) => (
-  <div style={pageStyles}>
+  <div sx={bodyStyles}>
     <main>
       <title>{pageContext.frontmatter.title}</title>
-      <h1 style={headingStyles}>{pageContext.frontmatter.title}</h1>
+      <span sx={eyebrowStyles}>{pageContext.frontmatter.eyebrow}</span>
+      <Text variant="h1" sx={{mt:'0'}}>{pageContext.frontmatter.title}</Text>
       {children}
     </main>
     <footer>

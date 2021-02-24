@@ -1,12 +1,23 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import { Link } from 'gatsby'
+
+const listStyle = {
+  listStyle: 'none', 
+  pl: '0px'
+}
+
+const itemStyle = {
+  pl: '0px',
+  ml:'0px'
+}
 
 const TutorialList = ({ posts }) => {
   return (
-    <ul>
+    <ul sx={listStyle}>
       {posts.map((post) => (
-        <li>
-          <h2><Link to={post.slug}>{post.frontmatter.title}</Link></h2>
+        <li sx={itemStyle}>
+          <h2><Link to={post.slug}>{post.frontmatter.eyebrow}: {post.frontmatter.title}</Link></h2>
           <p>{post.frontmatter.description}</p>
         </li>
       ))}

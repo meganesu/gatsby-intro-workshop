@@ -3,9 +3,11 @@ import React from "react";
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: "96px",
+  padding: "1rem",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
   lineHeight: "1.5rem",
+  maxWidth: "560px",
+  margin: "auto",
 };
 const headingStyles = {
   marginTop: 0,

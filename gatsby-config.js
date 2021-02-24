@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
     `gatsby-plugin-twitter`,
+    `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

@@ -5,6 +5,8 @@ description: "Do stuff"
 sort_order: 6
 ---
 
+import PreviousNext from "../../components/nav/previous-next";
+
 ## Introduction
 
 - "In the previous section, you learned..." Refresh their knowledge for anything they’ve learned in the previous sections that will be relevant to this part.
@@ -58,6 +60,9 @@ But if you get stuck, here's [one possible solution](https://github.com/meganesu
 - Bullet list of key takeaways (alt: checks for understanding, using `<details>` elements?)
 - 1-2 sentences teasing how this section connects to the next section (no details, just enough of a hook to motivate them to keep going)
 
-[Go to Part 7 &rarr;](/part-7)
-
-[Go back to Home &rarr;](/)
+<PreviousNext
+  prevTo="/part-5"
+  prevText="Part 5"
+  nextTo="/part-7"
+  nextText="Part 7"
+/>

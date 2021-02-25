@@ -39,10 +39,12 @@ const PreviousNext = ({prevTo, prevText, nextTo, nextText}) => (
       <span sx={overlineStyle}>&larr; previous</span>
       <span sx={textStyle}>{prevText}</span>
     </Link>
-    <Link to={nextTo} sx={linkStyle}>
-      <span sx={overlineStyle}>next &rarr;</span>
-      <span sx={textStyle}>{nextText}</span>
-    </Link>
+    {nextTo && 
+      <Link to={nextTo} sx={linkStyle}>
+        <span sx={overlineStyle}>next &rarr;</span>
+        <span sx={textStyle}>{nextText}</span>
+      </Link>
+    }
   </div>
 )
 

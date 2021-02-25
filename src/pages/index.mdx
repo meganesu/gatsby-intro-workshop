@@ -1,40 +1,53 @@
 ---
-title: Intro to Gatsby Workshop - GatsbyConf 2021
+title: "Intro to Gatsby Workshop"
+eyebrow: "GatsbyConf 2021"
 ---
 
-import { Link } from 'gatsby'
-import TutorialList from '../components/tutorial-list'
+import { Link, graphql } from "gatsby";
+import { Text } from "theme-ui";
+import TutorialList from "../components/tutorial-list";
+import Subhead from "../components/subhead";
+import Calloutbox from "../components/callout-box";
+import StyledLink from "../components/styled-link";
 
-Welcome to the Intro to Gatsby Workshop!
+<Subhead>Welcome to the Intro to Gatsby Workshop!</Subhead>
 
 In this workshop, you'll learn the fundamental Gatsby concepts by building a blog with MDX. Here's an [example site](https://intro_workshop_example_site.gatsbyjs.io/) to show what your finished product might look like.
 
-The slides for this workshop are available here: [Google Slides - Intro to Gatsby Workshop](https://docs.google.com/presentation/d/1hDQkrkYYSw_gqfoLFk59IA9eNiQlFYT3tfAnNkIiNfk/)
+<Calloutbox>
+  The slides for this workshop are available on&nbsp;
+  <a href="https://docs.google.com/presentation/d/1hDQkrkYYSw_gqfoLFk59IA9eNiQlFYT3tfAnNkIiNfk/">
+    Google Slides
+  </a>.
+</Calloutbox>
 
 ## Prerequisites
 
-Prior to the workshop, please go through <Link to="tutorial/part-0">Part 0</Link> to make sure you have all the necessary tools installed.
+Prior to the workshop, please go through <StyledLink to="/part-0">Part 0</StyledLink> to make sure you have all the necessary tools installed.
 
 For this workshop, we’re assuming you have some knowledge of HTML, CSS, and JavaScript. You don’t have to be an expert, but you should feel comfortable writing HTML, styling elements with classes, and creating functions. Want to brush up your skills? Check out the [Gatsby Web Creators playlist](https://youtube.com/playlist?list=PLCU2qJekvcN2KKkCAOvkhcC5tfOKOQzR9) on YouTube.
 
-New to React? We’ll cover the basics in the workshop. But if you want to prep beforehand, you can look up how to create components, how to use props, and how the children prop works.
+<Calloutbox>
+  New to React? We’ll cover the basics in the workshop. But if you want to prep
+  beforehand, you can look up how to create components, how to use props, and
+  how the children prop works.
+</Calloutbox>
 
 ## Curriculum
 
-<TutorialList
-  posts={props.data.allMdx.nodes}
-/>
+<TutorialList posts={props.data.allMdx.nodes} />
 
 export const query = graphql`
-{
-  allMdx(sort: {fields: frontmatter___sort_order}) {
-    nodes {
-      slug
-      frontmatter {
-        title
-        description
+  {
+    allMdx(sort: { fields: frontmatter___sort_order }) {
+      nodes {
+        slug
+        frontmatter {
+          title
+          description
+          eyebrow
+        }
       }
     }
   }
-}
-`
+`;

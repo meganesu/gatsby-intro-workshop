@@ -1,21 +1,28 @@
 ---
-title: "Part 1: Create and deploy your first Gatsby site"
+title: "Create and deploy your first Gatsby site"
+eyebrow: "Part 1"
 description: "Lay the ground work for your blog by creating a new Gatsby site. You'll also deploy and host your site using Gatsby Cloud."
 sort_order: 1
 ---
+
+import Calloutbox from "../../components/callout-box";
+import PreviousNext from "../../components/nav/previous-next";
 
 ## Introduction
 
 Now that you've set up your computer with all the tools you'll need, it's time to get started!
 
-In this section, you will go through the process of creating and deploying your first Gatsby site.
+<Calloutbox>
+  In this section, you will go through the process of creating and deploying
+  your first Gatsby site.
+</Calloutbox>
 
 ## What You Will Learn
 
 By the end of this section, you will be able to:
 
-* Create a new Gatsby site.
-* Deploy your site using Gatsby Hosting.
+- Create a new Gatsby site.
+- Deploy your site using Gatsby Hosting.
 
 ## Background
 
@@ -33,13 +40,13 @@ Since this is an introductory workshop, don't add any of the extra integrations 
 
 There are two ways you can run your site locally. In your terminal, change into the directory for your site, then run one of the following sets of commands:
 
-* Option 1: `gatsby develop`
-    * This starts up a local development server. It has some features that make it easier to work on your site. For example, hot reloading will trigger your site to rebuild automatically after you make changes to a file.
-    * You can see your site in a browser by visiting `localhost:8000`.
-* Option 2: `gatsby build` and then `gatsby serve`
-    * `gatsby build` will create a production-style build of your site and put it in the `public/` directory. `gatsby serve` starts up a local server that uses the code in `public/` directory.
-    * You can see your site in a browser by visiting `localhost:9000`.
-    * A prod-style build has more optimizations, but you'll lose some developer-experience features like hot reloading. 
+- Option 1: `gatsby develop`
+  - This starts up a local development server. It has some features that make it easier to work on your site. For example, hot reloading will trigger your site to rebuild automatically after you make changes to a file.
+  - You can see your site in a browser by visiting `localhost:8000`.
+- Option 2: `gatsby build` and then `gatsby serve`
+  - `gatsby build` will create a production-style build of your site and put it in the `public/` directory. `gatsby serve` starts up a local server that uses the code in `public/` directory.
+  - You can see your site in a browser by visiting `localhost:9000`.
+  - A prod-style build has more optimizations, but you'll lose some developer-experience features like hot reloading.
 
 In this workshop, you'll primarily use `gatsby develop`.
 
@@ -49,17 +56,17 @@ GitHub is a website that many developers use to back up and share their code onl
 
 1. Each codebase on GitHub is stored in its own **repository** (also called a "repo", for short). To create a new repository for your blog, click the plus icon in the top-right corner of the navigation bar. Select "New repository".
 
-    ![GATSBY_EMPTY_ALT](./new-repo.png)
+   ![GATSBY_EMPTY_ALT](./new-repo.png)
 
 1. When filling out the form for your new repo, you can make it public or private. Leave the "Add a README file", "Add .gitignore", and "Choose a license" checkboxes unchecked.
 
 1. To push your existing code from your computer to GitHub, enter the following commands from your terminal:
 
-    ```shell
-    git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPO_NAME.git
-    git branch -M main
-    git push -u origin main
-    ```
+   ```shell
+   git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPO_NAME.git
+   git branch -M main
+   git push -u origin main
+   ```
 
 ### Build your site with Gatsby Cloud
 
@@ -69,51 +76,51 @@ You can connect your codebase to Gatsby Cloud through GitHub:
 
 1. Go to your [Gatsby Cloud Dashboard](https://gatsbyjs.com/dashboard/). Click on the purple "Add a site" button next to the search bar.
 
-    ![GATSBY_EMPTY_ALT](./01-create-a-site-button.png)
+   ![GATSBY_EMPTY_ALT](./01-create-a-site-button.png)
 
 1. The next few steps will help you go through the steps to create a new site. First, select "Import from a Git repository" and click the "Next" button at the bottom of the page.
 
-    ![GATSBY_EMPTY_ALT](./02-import-a-git-repo.png)
+   ![GATSBY_EMPTY_ALT](./02-import-a-git-repo.png)
 
 1. Select GitHub as the Git provider.
 
-    ![GATSBY_EMPTY_ALT](./03-select-a-git-provider.png)
+   ![GATSBY_EMPTY_ALT](./03-select-a-git-provider.png)
 
 1. Select your GitHub username from the "Select an Organization" dropdown. If your username is not listed, choose "Add new Organization", which will open a new window with GitHub. The next few steps will show you how to give Gatsby Cloud access to your GitHub repo.
 
-    ![GATSBY_EMPTY_ALT](./04-add-new-organization.png)
+   ![GATSBY_EMPTY_ALT](./04-add-new-organization.png)
 
 1. The new GitHub window will ask you where you want to install Gatsby Cloud. Find your username in the list of organizations, and click the corresponding "Configure" button.
 
-    ![GATSBY_EMPTY_ALT](./05-github-app-permissions.png)
+   ![GATSBY_EMPTY_ALT](./05-github-app-permissions.png)
 
 1. GitHub will take you to the permissions page for Gatsby Cloud.
 
-    ![GATSBY_EMPTY_ALT](./06-gatsby-cloud-app.png)
+   ![GATSBY_EMPTY_ALT](./06-gatsby-cloud-app.png)
 
 1. In the "Repository access" section, you can choose to give Gatsby Cloud access to all your repos or only select repos. To give access to select repos, use the "Select repositories" dropdown to find the name of the repo you created for your project. **Don't forget to save your changes!**
 
-    ![GATSBY_EMPTY_ALT](./07-select-repositories-github.png)
+   ![GATSBY_EMPTY_ALT](./07-select-repositories-github.png)
 
 1. Now, when you go back to the Gatsby Cloud window, you should be able to find your repo using the "Select a Repository" field.
 
-    ![GATSBY_EMPTY_ALT](./08-select-repository-gatsby-cloud.png)
+   ![GATSBY_EMPTY_ALT](./08-select-repository-gatsby-cloud.png)
 
 1. Once you select your repo, a few more options will show up, which you can use to configure the branch and display name that Gatsby Cloud will use for your site. You can leave the default settings and click the "Next" button.
 
-    ![GATSBY_EMPTY_ALT](./09-add-site-details.png)
+   ![GATSBY_EMPTY_ALT](./09-add-site-details.png)
 
 1. Gatsby Cloud will ask you if you want to add any optional integrations to your site. For future projects, this might be useful if you want to use a CMS. But for now, click the "Skip this step" button.
 
-    ![GATSBY_EMPTY_ALT](./10-optional-integrations.png)
+   ![GATSBY_EMPTY_ALT](./10-optional-integrations.png)
 
 1. Gatsby Cloud will also ask if you want to add any environment variables. Skip this section, and click the "Create site" button.
 
-    ![GATSBY_EMPTY_ALT](./11-setup.png)
+   ![GATSBY_EMPTY_ALT](./11-setup.png)
 
 1. Now that your site has been created, you'll be taken to a site dashboard where you can see the status of your builds. Gatsby Cloud should start building your site automatically.
 
-    ![GATSBY_EMPTY_ALT](./12-site-page.png)
+   ![GATSBY_EMPTY_ALT](./12-site-page.png)
 
 Every time you push a new change to the main branch of your GitHub repo, Gatsby Cloud will see the changes and automatically start a build for the new version of your site.
 
@@ -125,7 +132,7 @@ Gatsby Cloud now includes hosting! That means that other people will be able to 
 
 To set up Gatsby Hosting:
 
-1. Go into the "Site Settings" tab for your site. 
+1. Go into the "Site Settings" tab for your site.
 1. Select "Hosting" from the sidebar.
 1. Find the "Deploy to Gatsby Hosting" section, and click the "Turn on" button.
 
@@ -147,6 +154,9 @@ Now that you've created the skeleton for your site and deployed it to Gatsby Clo
 
 In the next section, you'll learn how to customize the contents of your site using React.
 
-[Go to Part 2 &rarr;](/part-2)
-
-[Go back to Home &rarr;](/)
+<PreviousNext
+  prevTo="/part-0"
+  prevText="Part 0"
+  nextTo="/part-2"
+  nextText="Part 2"
+/>

@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/layout";
 
 const TutorialPage = ({ data }) => (
-  <Layout pageContext={{ 
+  <Layout tutorial pageContext={{ 
     frontmatter: { 
       title: data.mdx.frontmatter.title, 
       eyebrow: data.mdx.frontmatter.eyebrow 

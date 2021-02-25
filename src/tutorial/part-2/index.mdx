@@ -6,11 +6,9 @@ sort_order: 2
 ---
 
 import Calloutbox from "../../components/callout-box";
-import H2 from "../../components/typography/H2";
-import H3 from "../../components/typography/H3";
 import PreviousNext from "../../components/nav/previous-next";
 
-<H2>Introduction</H2>
+## Introduction
 
 In the previous section, you created your first Gatsby site and used Gatsby Cloud to deploy it to the internet.
 
@@ -27,7 +25,7 @@ Now that you have everything all set up, it's time to make this site your own! I
 - Brief paragraph (2-3 sentences) to highlight context and relevance.
 - Explain the goal of this part of the tutorial. Show diagrams, list acceptance criteria for desired end result.
 
-<H2>What You Will Learn</H2>
+## What You Will Learn
 
 - How to create a React component using JSX
 - How to create a page component
@@ -36,14 +34,14 @@ Now that you have everything all set up, it's time to make this site your own! I
 - How to use built-in Gatsby components
 - How to use props to change the way a component renders
 
-<H2>Agenda</H2>
+## Agenda
 
 - Bullet list to show the big picture of the steps in this part
 - Callout box with a link to starter branch for this section (so they can catch up if they haven’t been following along). "If you haven't done the previous sections of the Tutorial, you can still follow along from here. Clone the [whatever we call it] repo and check out the branch called `name-of-branch`."
 
-<H2>Learning Guide</H2>
+## Learning Guide
 
-<H3>👩‍🏫 A Crash Course on React Components</H3>
+### 👩‍🏫 A Crash Course on React Components
 
 Gatsby uses a JavaScript library called React to build UIs. With React, you can break down your UI into smaller, reusable pieces called components.
 
@@ -58,11 +56,11 @@ Brief intro to React for newcomers.
 - There are two different categories of components in a Gatsby site: page components and smaller, reusable components (UI components?)
   ![two types of components](./two-types-of-components.png)
 
-<H3>👩‍🏫 Page components:</H3>
+### 👩‍🏫 Page components:
 
 - React components that live in `src/pages` directory. Look at src/pages/index.js. This page is actually a component. Gatsby automatically turns the default export of files in src/pages into pages on your site.
 
-<H3>💻 Step 1: Create a new page component</H3>
+### 💻 Step 1: Create a new page component
 
 **Goal:** Add an `/about` page to your site.
 
@@ -70,7 +68,7 @@ Brief intro to React for newcomers.
 1. In your new file, create a new page component for your About page. (Don't forget to make it the default export!)
 1. Go to `localhost:8000/about` to see your new page.
 
-<H3>👩‍🏫 Reusable components</H3>
+### 👩‍🏫 Reusable components
 
 Not every component has to be a full page. You can create smaller components for specific UI elements. That way, you can reuse parts of your UI across your site.
 
@@ -93,7 +91,7 @@ Basic structure:
 1. Import the component
 1. Use the component in the JSX for another component.
 
-<H3>💻 Step 2: Add a link to the About page on the home page</H3>
+### 💻 Step 2: Add a link to the About page on the home page
 
 - Import the `<Link>` component in `src/pages/index.js`.
 - Use the `<Link>` component to add a link to the /about page on the home page.
@@ -108,7 +106,7 @@ Basic structure:
 1. Import the component
 1. Use the component in the JSX for another component.
 
-<H3>💻 Step 3: Create a Layout component</H3>
+### 💻 Step 3: Create a Layout component
 
 - Create a Layout component (src/components/layout.js) with a header and navbar (using Link component)
 - Add the layout component in the existing page components (index.js and /about page).
@@ -119,15 +117,15 @@ Styling
 - Explain: Use CSS in JS
 - Add styles to Layout component
 
-<H3>Challenge (extra credit)</H3>
+### Challenge (extra credit)
 
 Add some new components of your own. Style them.
 
 1. Don't forget to commit your changes! Push them to GitHub. When your Gatsby Cloud build finishes running, you should be able to see your changes reflected at your site's "latest build" URL.
 
-<H2>Summary</H2>
+## Summary
 
-<H3>Check For understanding</H3>
+### Check For understanding
 
 - How would you create a new /contact page?
   - Create a file at src/pages/contact.js. Create a new page component in that file.
@@ -142,7 +140,7 @@ Add some new components of your own. Style them.
 - Link to the “solution” code for this section
 - Bullet list of key takeaways (alt: checks for understanding, using `<details>` elements?)
 
-<H3>Takeaways</H3>
+### Takeaways
 
 - Types of components:
   ![types of components](./types-of-components.png)
@@ -151,7 +149,7 @@ Add some new components of your own. Style them.
 - You can use props to change how a component renders
 - Gatsby has some built-in components that you can use for free!
 
-<H2>Up Next</H2>
+## Up Next
 
 - 1-2 sentences teasing how this section connects to the next section (no details, just enough of a hook to motivate them to keep going)
 

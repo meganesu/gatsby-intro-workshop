@@ -129,6 +129,36 @@ const theme = {
     },
     li: {
       mb: [1,2]
+    },
+    h2: {
+      fontFamily: 'body',
+      fontSize: [4,5,6],
+      fontWeight: 'extraBold',
+      lineHeight: 2,
+      letterSpacing: 1,   
+      color: 'text',
+      mt: [4, 7],
+      mb: '0px'
+    },
+    h3: {
+      fontFamily: 'body',
+      fontSize: [3,4],
+      fontWeight: 'bold',
+      lineHeight: 3,
+      letterSpacing: 2,
+      color: 'text',
+      mt: [2,3,4],
+      mb: '0px'
+    },
+    h4: {
+      fontFamily: 'body',
+      fontSize: [2,3],
+      fontWeight: 'bold',
+      lineHeight: 3,
+      letterSpacing: 1,
+      color: 'text',
+      mt: [1,2],
+      mb: '0px'
     }
   }
 };

@@ -13,7 +13,7 @@ const itemStyle = {
   ml:'0px',
   mb: [2,3],
   borderRadius: '8px',
-  border: '1px solid transparent',
+  border: '2px solid transparent',
   transition: 'border 0.2s ease-in-out, transform 0.2s ease-in-out, background 0.2s ease-in-out',
   '& > a': {
     textDecoration: 'none',
@@ -37,7 +37,7 @@ const itemStyle = {
   },
   '&:hover': {
     bg: 'purple5',
-    border: (theme) => `1px solid ${theme.colors.purple30}`,
+    border: (theme) => `2px solid ${theme.colors.purple20}`,
     transform: 'translateX(5px)',
     cursor: 'pointer',
     '&:before': {

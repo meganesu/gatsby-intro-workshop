@@ -1,3 +1,5 @@
+import nightOwl from '@theme-ui/prism/presets/night-owl'
+
 const theme = {
   breakpoints: ['50em', '64em', '90em'],
   space: [4, 8, 16, 24, 32, 40, 48, 64, 96, 120],
@@ -7,6 +9,9 @@ const theme = {
     text: '#3e3944',
     textMedium: '#6b5b84',
     primary: '#8A4BAF',
+    secondary: '#119',
+    accent: '#639',
+    gray: '#666',
     background: '#fff',
     purple5: '#FCFAFF',
     purple10: '#F6EDFA',
@@ -19,7 +24,6 @@ const theme = {
     grey10: '#F5F5F5',
     grey20: '#F0F0F2',
     grey30: '#D9D7E0',
-
   },
   fonts: {
     body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
@@ -107,7 +111,22 @@ const theme = {
     },
     body: {
       lineHeight: 3
-    }
+    },
+    pre: {
+      ...nightOwl,
+      p: 3,
+      borderRadius: '4px',
+    },
+    inlineCode: {
+      color: 'primary',
+      bg: 'purple10',
+      borderRadius: 3,
+      px: '0.4rem',
+      pt: '0.2rem',
+      pb: '0.3rem',
+      position: 'relative',
+      top: '-1px'
+    },
   }
 };
 

@@ -4,15 +4,11 @@ const theme = {
   breakpoints: ['50em', '64em', '90em'],
   space: [4, 8, 16, 24, 32, 40, 48, 64, 96, 120],
   colors: {
-    // text: '#1c1e21',
-    header: '#3e3944',
-    text: '#3e3944',
-    textMedium: '#6b5b84',
+    header: '#3E3944',
+    text: '#3E3944',
+    textMedium: '#6B5B84',
     primary: '#8A4BAF',
-    secondary: '#119',
-    accent: '#639',
-    gray: '#666',
-    background: '#fff',
+    background: '#FFFFFF',
     purple5: '#FCFAFF',
     purple10: '#F6EDFA',
     purple20: '#F1DEFA',
@@ -24,6 +20,7 @@ const theme = {
     grey10: '#F5F5F5',
     grey20: '#F0F0F2',
     grey30: '#D9D7E0',
+    grey50: '#78757A',
   },
   fonts: {
     body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
@@ -116,6 +113,9 @@ const theme = {
       ...nightOwl,
       p: 3,
       borderRadius: '4px',
+      hyphens: true,
+      whiteSpace: 'pre-wrap',
+      overflowX: 'auto',
     },
     inlineCode: {
       color: 'primary',

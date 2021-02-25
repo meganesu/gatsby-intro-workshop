@@ -7,6 +7,7 @@ sort_order: 1
 
 import Calloutbox from "../../components/callout-box";
 import { H2, H3 } from "../../components/typography";
+import PreviousNext from "../../components/nav/previous-next";
 
 <H2>Introduction</H2>
 
@@ -148,6 +149,9 @@ Now that you've created the skeleton for your site and deployed it to Gatsby Clo
 
 In the next section, you'll learn how to customize the contents of your site using React.
 
-[Go to Part 2 &rarr;](/part-2)
-
-[Go back to Home &rarr;](/)
+<PreviousNext
+  prevTo="/part-0"
+  prevText="Part 0"
+  nextTo="/part-2"
+  nextText="Part 2"
+/>

@@ -34,7 +34,7 @@ const eyebrowStyles = {
 const footerStyles = {
   display: 'flex',
   alignItems: 'flex-start',
-  pt: 3,
+  py: 3,
   mt: [5,7],
   borderTop: (theme) => `1px solid ${theme.colors.purple20}`,
 }

@@ -8,6 +8,7 @@ sort_order: 2
 import Calloutbox from "../../components/callout-box";
 import H2 from "../../components/typography/H2";
 import H3 from "../../components/typography/H3";
+import PreviousNext from "../../components/nav/previous-next";
 
 <H2>Introduction</H2>
 
@@ -154,6 +155,9 @@ Add some new components of your own. Style them.
 
 - 1-2 sentences teasing how this section connects to the next section (no details, just enough of a hook to motivate them to keep going)
 
-[Go to Part 3 &rarr;](/part-3)
-
-[Go back to Home &rarr;](/)
+<PreviousNext
+  prevTo="/part-1"
+  prevText="Part 1"
+  nextTo="/part-3"
+  nextText="Part 3"
+/>

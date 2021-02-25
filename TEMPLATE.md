@@ -8,7 +8,9 @@
 
 ## What You Will Learn
 
-* Bullet list of learning objectives (should link to the headings for the corresponding step). Focus on transferable skills.
+By the end of this section, you will be able to:
+
+* Bullet list of learning objectives. Focus on transferable skills. (What are the things they'll be able to apply to a new situation?)
 
 ## Background
 

@@ -8,7 +8,6 @@ const theme = {
     textMedium: '#6b5b84',
     primary: '#8A4BAF',
     background: '#fff',
-    header: '#FFFFFF',
     purple5: '#FCFAFF',
     purple10: '#F6EDFA',
     purple20: '#F1DEFA',

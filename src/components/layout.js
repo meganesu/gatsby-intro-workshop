@@ -5,24 +5,38 @@ const bodyStyles = {
   fontFamily: 'body',
 }
 
+const titleStyles = {
+  mt:'0',
+  mb: [4,5,7],
+  pb: [2,3],
+  borderBottom: (theme) => `1px solid ${theme.colors.grey30}`,
+  display: 'flex',
+  alignItems: 'flex-start',
+  flexDirection: 'column',
+}
+  
 const eyebrowStyles = {
   color: 'primary',
   display: 'inline-block',
   textTransform: 'uppercase',
   fontSize: 2,
   fontWeight: 'medium',
-  bg: 'purple10',
+  bg: 'purple5',
+  letterSpacing: 2,
+  mb: 1,
   py: 0,
   px: 2,
-  borderRadius: '20px'
+  borderRadius: '20px',
+  border: (theme) => `1px solid ${theme.colors.purple30}`,
+  boxShadow: (theme) => `0 0 0 2px ${theme.colors.purple20}`,
 }
 
 const Layout = ({ children, pageContext }) => (
   <div sx={bodyStyles}>
     <main>
       <title>{pageContext.frontmatter.title}</title>
-      <span sx={eyebrowStyles}>{pageContext.frontmatter.eyebrow}</span>
-      <Text variant="h1" sx={{mt:'0'}}>{pageContext.frontmatter.title}</Text>
+      
+      <Text variant="h1" as="h1" sx={titleStyles}><span sx={eyebrowStyles}>{pageContext.frontmatter.eyebrow}</span>{pageContext.frontmatter.title}</Text>
       {children}
     </main>
     <footer>

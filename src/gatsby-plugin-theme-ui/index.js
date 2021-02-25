@@ -2,20 +2,25 @@ const theme = {
   breakpoints: ['50em', '64em', '90em'],
   space: [4, 8, 16, 24, 32, 40, 48, 64, 96, 120],
   colors: {
-    text: '#1c1e21',
+    // text: '#1c1e21',
+    header: '#3e3944',
+    text: '#3e3944',
+    textMedium: '#6b5b84',
     primary: '#8A4BAF',
     background: '#fff',
-    heading: '#FFFFFF',
+    header: '#FFFFFF',
     purple5: '#FCFAFF',
     purple10: '#F6EDFA',
-    purple20: '#B9B9C6',
-    purple30: '#9897AA',
-    purple40: '#575A6B',
-    purple50: '#40424F',
-    purple60: '#32343E',
-    purple70: '#21212C',
-    purple80: '#1C1C22',
-    purple90: '#121216',
+    purple20: '#F1DEFA',
+    purple30: '#D9BAE8',
+    purple40: '#B17ACC',
+    purple50: '#8954A8',
+    purple60: '#663399',
+    magenta60: '#A6026A',
+    grey10: '#F5F5F5',
+    grey20: '#F0F0F2',
+    grey30: '#D9D7E0',
+
   },
   fonts: {
     body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
@@ -54,29 +59,31 @@ const theme = {
       fontWeight: 'extraBold',
       lineHeight: 1,
       letterSpacing: 0,
+      color: 'text'
     },
     subhead: {
       fontFamily: 'body',
-      fontSize: [3, 4],
+      fontSize: [3, 4, 5],
       fontWeight: 'medium',
       lineHeight: [2, 3],
-      letterSpacing: 1
+      letterSpacing: 1,
+      color: 'text'
     },
     h2: {
       fontFamily: 'body',
-      fontSize: [5, 6, 7],
-      fontWeight: 'black',
+      fontSize: [4,5,6],
+      fontWeight: 'extraBold',
       lineHeight: 2,
-      letterSpacing: 1,
-      color: 'heading'
+      letterSpacing: 1,   
+      color: 'text'   
     },
     h3: {
       fontFamily: 'body',
-      fontSize: [4, 5],
-      fontWeight: 'extraBold',
+      fontSize: [3,4],
+      fontWeight: 'bold',
       lineHeight: 3,
       letterSpacing: 2,
-      color: 'heading'
+      color: 'text'
     },
     h4: {
       fontFamily: 'body',
@@ -84,20 +91,20 @@ const theme = {
       fontWeight: 'extraBold',
       lineHeight: 3,
       letterSpacing: 2,
-      color: 'heading'
+      color: 'text'
     }
   },
   styles: {
     root: {
       mt: [4,5,8],
       mx: ['2rem', 'auto'],
-      maxWidth: ['100%', '48rem', '60rem', '86rem'],
+      maxWidth: ['100%', '48rem'],
       lineHeight: 3,
-      color: (theme) => theme.colors.text,
+      color: (theme) => theme.colors.textMedium,
       fonts: '"system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     },
     a: {
-      color: 'teal40'
+      color: 'purple60'
     },
     body: {
       lineHeight: 3

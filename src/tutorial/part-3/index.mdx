@@ -1,5 +1,6 @@
 ---
-title: "Part 3: Add features with plugins"
+title: "Add features with plugins"
+eyebrow: "Part 3"
 description: "Quickly add functionality to your site by using one of Gatsby's many plugins."
 sort_order: 3
 ---
@@ -12,8 +13,8 @@ In this section, you'll learn what plugins are and how to use them in your site.
 
 ## What You Will Learn
 
-* How to install and configure a plugin.
-* How to use the `StaticImage` component from the `gatsby-plugin-image` plugin.
+- How to install and configure a plugin.
+- How to use the `StaticImage` component from the `gatsby-plugin-image` plugin.
 
 ## Background
 
@@ -32,26 +33,24 @@ You can think of a plugin as an accessory. You don't _need_ to use plugins in yo
 Here's the general process of using a plugin in your site:
 
 1. **Install the plugin using npm.**
-    * In your terminal, run the following command (swapping out `plugin-name` for the name of the plugin you want to use):
-       ```
-       npm install plugin-name
-       ```
-    * Depending on what plugin you're using, there might be more dependencies that you also need to install. Check the specific plugin's README in the plugin library for more details.
+   - In your terminal, run the following command (swapping out `plugin-name` for the name of the plugin you want to use):
+     ```
+     npm install plugin-name
+     ```
+   - Depending on what plugin you're using, there might be more dependencies that you also need to install. Check the specific plugin's README in the plugin library for more details.
 1. **Configure the plugin in your `gatsby-config.js` file.**
-    * Your `gatsby-config.js` file contains information about your site, including configuration for plugins. You can add a plugin to the `plugins` array.
-        ```javascript
-        module.exports = {
-          siteMetadata: {
-            title: "my-cool-blog",
-          },
-          plugins: [
-            "gatsby-plugin-image",
-          ],
-        };
-        ```
-    * Some plugins require extra configuration options. In that case, you'll add an object to the `plugins` array (instead of a string). If that's the case, the plugin README will have more details on what that object should look like.
+   - Your `gatsby-config.js` file contains information about your site, including configuration for plugins. You can add a plugin to the `plugins` array.
+     ```javascript
+     module.exports = {
+       siteMetadata: {
+         title: "my-cool-blog",
+       },
+       plugins: ["gatsby-plugin-image"],
+     };
+     ```
+   - Some plugins require extra configuration options. In that case, you'll add an object to the `plugins` array (instead of a string). If that's the case, the plugin README will have more details on what that object should look like.
 1. **Use the plugin features in your site.**
-    * The specifics of this will be different based on what the plugin does. You might import a component or function from the site. You might not need to do anything else at all. Check the plugin's README for more details.
+   - The specifics of this will be different based on what the plugin does. You might import a component or function from the site. You might not need to do anything else at all. Check the plugin's README for more details.
 
 ![The general process for using a plugin: Install, configure, and use in your site (when needed).](./plugin-process.png)
 
@@ -65,8 +64,8 @@ The `gatsby-plugin-image` plugin exports a component that you can use to load im
 
 To use the `<StaticImage>` component, you'll also need to install a few other plugins:
 
-* `gatsby-plugin-sharp`: Handles the actual image processing that is used by `gatsby-plugin-image`.
-* `gatsby-source-filesystem`: Lets you pull in data from your filesystem. (You'll learn more about this plugin later. Just install it for now.)
+- `gatsby-plugin-sharp`: Handles the actual image processing that is used by `gatsby-plugin-image`.
+- `gatsby-source-filesystem`: Lets you pull in data from your filesystem. (You'll learn more about this plugin later. Just install it for now.)
 
 #### Step 2: Configure `gatsby-plugin-image` and dependencies
 
@@ -76,8 +75,8 @@ When you configure your plugins in the `gatsby-config.js` file, you only need to
 
 The `<StaticImage>` component takes two props:
 
-* `src`: The URL to the image you want to load. (This is the same as what you put in the `src` attribute of an `<img>` element.)
-* `alt`: The alt text to describe the image. This gets used by screen readers or if there's a problem loading the image.
+- `src`: The URL to the image you want to load. (This is the same as what you put in the `src` attribute of an `<img>` element.)
+- `alt`: The alt text to describe the image. This gets used by screen readers or if there's a problem loading the image.
 
 There are also additional options that you can pass in to control the image size or loading behavior. For the full list of options, refer to the [Reference Guide for `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/) in the Gatsby documentation.
 
@@ -85,9 +84,9 @@ There are also additional options that you can pass in to control the image size
 
 You might find these docs useful:
 
-* [How-To Guide: Using `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/how-to/images-and-media/using-gatsby-plugin-image/) - Step-by-step instructions on how to use the `<StaticImage>` component.
-* [Reference Guide: `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/) - A detailed reference on the properties available in the `<StaticImage>` API.
-* [Plugin README for `gatsby-plugin-image`](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
+- [How-To Guide: Using `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/how-to/images-and-media/using-gatsby-plugin-image/) - Step-by-step instructions on how to use the `<StaticImage>` component.
+- [Reference Guide: `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/) - A detailed reference on the properties available in the `<StaticImage>` API.
+- [Plugin README for `gatsby-plugin-image`](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
 
 ## Exercise #1: Add `gatsby-plugin-image`
 
@@ -116,23 +115,21 @@ But if you get stuck, here's [one possible solution](https://github.com/meganesu
 
 ![The example home page, now including a picture of a dog.](./exercise-1-goal.png)
 
-
 ## Exercise #2: Add more plugins!
 
 Choose one or more of the following plugins to add to your site:
 
-* [`gatsby-plugin-react-helmet`](https://gatsbyjs.com/plugins/gatsby-plugin-react-helmet): Add metadata to your `<head>`.
-* [`gatsby-plugin-google-gtag`](https://gatsbyjs.com/plugins/gatsby-plugin-google-gtag/): Add Google Analytics.
-* [`gatsby-plugin-manifest`](https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/): Let users add your site to their home screen on mobile browsers.
-* [`gatsby-plugin-offline`](https://www.gatsbyjs.com/plugins/gatsby-plugin-offline/): Add service worker support.
+- [`gatsby-plugin-react-helmet`](https://gatsbyjs.com/plugins/gatsby-plugin-react-helmet): Add metadata to your `<head>`.
+- [`gatsby-plugin-google-gtag`](https://gatsbyjs.com/plugins/gatsby-plugin-google-gtag/): Add Google Analytics.
+- [`gatsby-plugin-manifest`](https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/): Let users add your site to their home screen on mobile browsers.
+- [`gatsby-plugin-offline`](https://www.gatsbyjs.com/plugins/gatsby-plugin-offline/): Add service worker support.
 
 <details>
   <summary>Hints</summary>
 
-* Refer to the README for each plugin for more details on how to configure and use it.
+- Refer to the README for each plugin for more details on how to configure and use it.
 
 </details>
-
 
 ## Challenge (Extra Credit)
 
@@ -142,10 +139,10 @@ Browse the [Gatsby Plugin Library](https://www.gatsbyjs.com/plugins), and choose
 
 The key takeaways from this section are:
 
-* A plugin is a package that lets you add new features to your site.
-* Using plugins saves you time, since it's faster to install and configure a plugin than it is to recreate the same functionality from scratch.
-* The general process for using a plugin is to install it, configure it in your `gatsby-config.js` file, and then (sometimes) to use it in your site.
-* You can use the [Gatsby Plugin Library](https://www.gatsbyjs.com/plugins) to browse all the available plugins and learn more about how each one works.
+- A plugin is a package that lets you add new features to your site.
+- Using plugins saves you time, since it's faster to install and configure a plugin than it is to recreate the same functionality from scratch.
+- The general process for using a plugin is to install it, configure it in your `gatsby-config.js` file, and then (sometimes) to use it in your site.
+- You can use the [Gatsby Plugin Library](https://www.gatsbyjs.com/plugins) to browse all the available plugins and learn more about how each one works.
 
 In the next section, you'll learn about a specific category of plugins: plugins that pull data into your site.
 

@@ -5,22 +5,28 @@ description: "Lay the ground work for your blog by creating a new Gatsby site. Y
 sort_order: 1
 ---
 
-## Introduction
+import Calloutbox from "../../components/callout-box";
+import { H2, H3 } from "../../components/typography";
+
+<H2>Introduction</H2>
 
 Now that you've set up your computer with all the tools you'll need, it's time to get started!
 
-In this section, you will go through the process of creating and deploying your first Gatsby site.
+<Calloutbox>
+  In this section, you will go through the process of creating and deploying
+  your first Gatsby site.
+</Calloutbox>
 
-## What You Will Learn
+<H2>What You Will Learn</H2>
 
 By the end of this section, you will be able to:
 
 - Create a new Gatsby site.
 - Deploy your site using Gatsby Hosting.
 
-## Background
+<H2>Background</H2>
 
-### Creating a Gatsby site
+<H3>Creating a Gatsby site</H3>
 
 The Gatsby command line interface (CLI) has a command you can use to create a new Gatsby site: `gatsby new`.
 
@@ -30,7 +36,7 @@ Since this is an introductory workshop, don't add any of the extra integrations 
 
 ![When the CLI asks if you want to use a CMS or styling system, select "No (or I'll add it later)". When it asks if you want to install additional features with other plugins, use the arrow keys to scroll to the bottom of the list and select "Done".](./gatsby-new.png)
 
-### Running your site locally
+<H3>Running your site locally</H3>
 
 There are two ways you can run your site locally. In your terminal, change into the directory for your site, then run one of the following sets of commands:
 
@@ -44,7 +50,7 @@ There are two ways you can run your site locally. In your terminal, change into 
 
 In this workshop, you'll primarily use `gatsby develop`.
 
-### Setting up a GitHub repo for your site
+<H3>Setting up a GitHub repo for your site</H3>
 
 GitHub is a website that many developers use to back up and share their code online. By uploading your code to GitHub, you'll be able to work on the same codebase from multiple computers. You'll also be able to use Gatsby Cloud to build and host your site.
 
@@ -62,7 +68,7 @@ GitHub is a website that many developers use to back up and share their code onl
    git push -u origin main
    ```
 
-### Build your site with Gatsby Cloud
+<H3>Build your site with Gatsby Cloud</H3>
 
 Gatsby Cloud is a custom-built infrastructure platform that is specifically tailored to building and deploying Gatsby sites.
 
@@ -120,7 +126,7 @@ Every time you push a new change to the main branch of your GitHub repo, Gatsby 
 
 There will be a unique URL for each build (like `https://build-49535320-b3ae-4761-bbeb-f8f7fa07e0fc.gtsb.io/`), and a URL that always has the latest build (like `my-awesome-repo-main.gtsb.io`).
 
-### Setting up Gatsby Hosting
+<H3>Setting up Gatsby Hosting</H3>
 
 Gatsby Cloud now includes hosting! That means that other people will be able to access your site using a URL that ends with `.gatsbyjs.io`.
 
@@ -132,11 +138,11 @@ To set up Gatsby Hosting:
 
 ![GATSBY_EMPTY_ALT](./turn-on-hosting.png)
 
-## Challenge (Extra Credit)
+<H2>Challenge (Extra Credit)</H2>
 
 If you have a custom domain you'd like to connect to your site, you can set it up in Gatsby Cloud by following the instructions in this doc: [Adding a Custom Domain](https://www.notion.so/gatsbyjs/Adding-a-Custom-Domain-b711146c4f8146a380bb0ba96fad1928).
 
-## Summary
+<H2>Summary</H2>
 
 Now that you've created the skeleton for your site and deployed it to Gatsby Cloud, you have a link to your site that you can share with anyone!
 

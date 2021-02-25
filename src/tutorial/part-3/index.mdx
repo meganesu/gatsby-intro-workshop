@@ -5,20 +5,23 @@ description: "Quickly add functionality to your site by using one of Gatsby's ma
 sort_order: 3
 ---
 
-## Introduction
+import Calloutbox from "../../components/callout-box";
+import { H2, H3, H4 } from "../../components/typography";
+
+<H2>Introduction</H2>
 
 It can be a lot of work to build new features for a website. Luckily, Gatsby's plugin ecosystem has thousands of prebuilt packages for you to choose from. By using a plugin, you can quickly add new functionality to your site without needing to build it from scratch yourself.
 
 In this section, you'll learn what plugins are and how to use them in your site.
 
-## What You Will Learn
+<H2>What You Will Learn</H2>
 
 - How to install and configure a plugin.
 - How to use the `StaticImage` component from the `gatsby-plugin-image` plugin.
 
-## Background
+<H2>Background</H2>
 
-### What is a plugin?
+<H3>What is a plugin?</H3>
 
 In Gatsby terms, a **plugin** is a separate npm package that you install to add extra features to your site.
 
@@ -28,7 +31,7 @@ You can think of a plugin as an accessory. You don't _need_ to use plugins in yo
 
 ![Kitchen accessories are specialized tools that do one thing really well. They aren't required, but they make your life easier.)](./cooking-accessories.png)
 
-### Adding a plugin to your site
+<H3>Adding a plugin to your site</H3>
 
 Here's the general process of using a plugin in your site:
 
@@ -54,20 +57,27 @@ Here's the general process of using a plugin in your site:
 
 ![The general process for using a plugin: Install, configure, and use in your site (when needed).](./plugin-process.png)
 
-### An Example: `gatsby-plugin-image`
+<H3>
+  An Example: <inlineCode>gatsby-plugin-image</inlineCode>
+</H3>
 
 You can use the `gatsby-plugin-image` plugin to add performant images to your site.
 
 The `gatsby-plugin-image` plugin exports a component that you can use to load images from a remote URL or your local file system: `<StaticImage>`.
 
-#### Step 1: Install `gatsby-plugin-image` and dependencies
+<H4>
+  Step 1: Install <inlineCode>gatsby-plugin-image</inlineCode> and dependencies
+</H4>
 
 To use the `<StaticImage>` component, you'll also need to install a few other plugins:
 
 - `gatsby-plugin-sharp`: Handles the actual image processing that is used by `gatsby-plugin-image`.
 - `gatsby-source-filesystem`: Lets you pull in data from your filesystem. (You'll learn more about this plugin later. Just install it for now.)
 
-#### Step 2: Configure `gatsby-plugin-image` and dependencies
+<H4>
+  Step 2: Configure <inlineCode>gatsby-plugin-image</inlineCode> and
+  dependencies
+</H4>
 
 When you configure your plugins in the `gatsby-config.js` file, you only need to add `gatsby-plugin-image` and `gatsby-plugin-sharp`. You'll configure `gatsby-plugin-filesystem` later on in the workshop.
 
@@ -80,7 +90,7 @@ The `<StaticImage>` component takes two props:
 
 There are also additional options that you can pass in to control the image size or loading behavior. For the full list of options, refer to the [Reference Guide for `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/) in the Gatsby documentation.
 
-#### Additional Resources
+<H4>Additional Resources</H4>
 
 You might find these docs useful:
 
@@ -88,9 +98,11 @@ You might find these docs useful:
 - [Reference Guide: `gatsby-plugin-image`](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/) - A detailed reference on the properties available in the `<StaticImage>` API.
 - [Plugin README for `gatsby-plugin-image`](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
 
-## Exercise #1: Add `gatsby-plugin-image`
+<H2>
+  Exercise #1: Add <inlineCode>gatsby-plugin-image</inlineCode>
+</H2>
 
-### Goal
+<H3>Goal</H3>
 
 Add an image from a remote URL to the home page.
 
@@ -115,7 +127,7 @@ But if you get stuck, here's [one possible solution](https://github.com/meganesu
 
 ![The example home page, now including a picture of a dog.](./exercise-1-goal.png)
 
-## Exercise #2: Add more plugins!
+<H2>Exercise #2: Add more plugins!</H2>
 
 Choose one or more of the following plugins to add to your site:
 
@@ -131,11 +143,11 @@ Choose one or more of the following plugins to add to your site:
 
 </details>
 
-## Challenge (Extra Credit)
+<H2>Challenge (Extra Credit)</H2>
 
 Browse the [Gatsby Plugin Library](https://www.gatsbyjs.com/plugins), and choose another plugin to add to your site.
 
-## Summary
+<H2>Summary</H2>
 
 The key takeaways from this section are:
 

@@ -90,10 +90,10 @@ const theme = {
     },
     h4: {
       fontFamily: 'body',
-      fontSize: 4,
-      fontWeight: 'extraBold',
+      fontSize: [2,3],
+      fontWeight: 'bold',
       lineHeight: 3,
-      letterSpacing: 2,
+      letterSpacing: 1,
       color: 'text'
     }
   },
@@ -127,6 +127,9 @@ const theme = {
       position: 'relative',
       top: '-1px'
     },
+    li: {
+      mb: [1,2]
+    }
   }
 };
 

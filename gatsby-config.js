@@ -11,6 +11,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        start_url: `/`,        
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
     `gatsby-remark-images`,
     `gatsby-plugin-twitter`,
     `gatsby-plugin-theme-ui`,

@@ -57,7 +57,6 @@ const TutorialNav = () => (
     <Link to="/" sx={{textDecoration: 'none', color: 'primary'}}>&larr; Go Home</Link>
     <Text sx={headerStyle}>Tutorial Lessons</Text>
     <ul sx={menuStyle}>
-      {/* <li><Link sx={linkStyle} activeClassName='active' to="/">Home</Link></li> */}
       <li><Link sx={linkStyle} activeClassName='active' to="/part-0"> Set up your development environment</Link></li>
       <li><Link sx={linkStyle} activeClassName='active' to="/part-1"> Create and deploy your first Gatsby site</Link></li>
       <li><Link sx={linkStyle} activeClassName='active' to="/part-2"> Use and style React components</Link></li>

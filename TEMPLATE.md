@@ -16,10 +16,31 @@
 
 ## Exercise #1: Add some stuff
 
-**Goal:** A short sentence describing the big picture for what they're doing in this exercise.
+### Goal
+
+A short sentence describing the big picture for what they're doing in this exercise.
 
 * Include instructions for the exercise.
+
 * Add a link to the solution.
+
+<details>
+  <summary>Hints</summary>
+
+Include tips to help students if they get stuck. Can include a bullet list or numbered list (if order of steps is important).
+
+</details>
+
+<details>
+  <summary>Solution</summary>
+
+You'll learn more if you work through the exercise on your own.
+
+But if you get stuck, here's [one possible solution](https://github.com/meganesu/gatsby-intro-workshop-example-site/commit/43d66aec890f22019b10d63e7bb36e3a6a354d72).
+
+**&uarr; Replace this link with the right commit for this exercise**
+
+</details>
 
 ## Challenge (Extra Credit)
 

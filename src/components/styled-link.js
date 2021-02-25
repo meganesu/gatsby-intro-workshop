@@ -3,11 +3,15 @@ import { jsx } from 'theme-ui';
 import { Link } from "gatsby";
 
 const linkStyles = {
-  color: 'purple60'
+  color: 'purple60',
+}
+
+const activeStyle = {
+  fontWeight: 'bold'
 }
 
 const StyledLink = ({to, children}) => (
-  <Link sx={linkStyles} to={to}>{children}</Link>
+  <Link activeStyle={activeStyle} sx={linkStyles} to={to}>{children}</Link>
 )
 
 export default StyledLink

@@ -16,7 +16,7 @@ const theme = {
     purple40: '#B17ACC',
     purple50: '#8954A8',
     purple60: '#663399',
-    magenta60: '#A6026A',
+    purple80: '#452475',
     grey10: '#F5F5F5',
     grey20: '#F0F0F2',
     grey30: '#D9D7E0',
@@ -97,8 +97,6 @@ const theme = {
   styles: {
     root: {
       mt: [4,5,8],
-      mx: ['2rem', 'auto'],
-      maxWidth: ['100%', '48rem'],
       lineHeight: 3,
       color: (theme) => theme.colors.textMedium,
       fonts: '"system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',

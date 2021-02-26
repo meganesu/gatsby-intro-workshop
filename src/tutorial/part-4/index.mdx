@@ -43,8 +43,8 @@ Update the `<Layout>` component to pull in the site title from `siteMetadata`.
 <details>
   <summary>Hints</summary>
 
-* Since the `<Layout>` component is not a page component, use `useStaticQuery` to write your query.
-* The value of `siteMetadata` can be configured in your `gatsby-config.js` file.
+- Since the `<Layout>` component is not a page component, use `useStaticQuery` to write your query.
+- The value of `siteMetadata` can be configured in your `gatsby-config.js` file.
 
 </details>
 
@@ -65,8 +65,8 @@ Create a `blog/` directory at least two `.mdx` files for your placeholder blog p
 
 Each `.mdx` file should include:
 
-* Front matter with a title and detailed
-* Some content with at least a Markdown heading and a paragraph.
+- Front matter with a title and detailed
+- Some content with at least a Markdown heading and a paragraph.
 
 <details>
   <summary>Solution</summary>
@@ -84,9 +84,8 @@ But if you get stuck, here's [one possible solution](https://github.com/meganesu
 Create a `/blog` page that lists out the filename for each of your posts.
 
 <Calloutbox>
-
-You won't be able to render the contents of your posts just yet, since your site doesn't know how to process MDX. You'll fix that in the next section!
-
+  You won't be able to render the contents of your posts just yet, since your
+  site doesn't know how to process MDX. You'll fix that in the next section!
 </Calloutbox>
 
 <details>
@@ -95,8 +94,8 @@ You won't be able to render the contents of your posts just yet, since your site
 1. Configure `gatsby-source-filesystem` to pull the `.mdx` files for your posts into the data layer.
 1. Use GraphiQL to write a query to get the names of all your blog posts.
 1. Create a `/blog` page.
-    * Add a page query to pull in the data about your posts.
-    * Loop over the nodes to display the title of each post. (New to JavaScript? Check out the [MDN documentation for the array `.map()` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).)
+   - Add a page query to pull in the data about your posts.
+   - Loop over the nodes to display the title of each post. (New to JavaScript? Check out the [MDN documentation for the array `.map()` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).)
 
 </details>
 

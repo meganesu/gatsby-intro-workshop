@@ -23,21 +23,19 @@ By the end of this section, you will be able to:
 
 - Separate sections (labeled by `h3` titles) explaining all the content students will need to be able to complete the exercises.
 
-## Exercise #1: Add some stuff
+## Exercise #1: Add a dynamic hero image to each blog post
 
 ### Goal
 
-A short sentence describing the big picture for what they're doing in this exercise.
-
-- Include instructions for the exercise.
-
-- Add a link to the solution.
+Use the dynamic `<GatsbyImage>` component from `gatsby-plugin-image` to add a hero image to each blog post.
 
 <details>
   <summary>Hints</summary>
 
-Include tips to help students if they get stuck. Can include a bullet list or numbered list (if order of steps is important).
-
+1. Download a hero image for each blog post, and put them in your `/blog` folder.
+1. Create a new field in the front matter for each `.mdx` file with the relative path to the hero image.
+1. Use the `<GatsbyImage>` component and `getImage()` function to render the hero image in your blog post template.
+  
 </details>
 
 <details>
@@ -45,7 +43,7 @@ Include tips to help students if they get stuck. Can include a bullet list or nu
 
 You'll learn more if you work through the exercise on your own.
 
-But if you get stuck, here's [one possible solution](https://github.com/meganesu/gatsby-intro-workshop-example-site/commit/43d66aec890f22019b10d63e7bb36e3a6a354d72).
+But if you get stuck, here's [one possible solution](https://github.com/meganesu/gatsby-intro-workshop-example-site/commit/f4820eaa2c30951e5c101247712c84476b63e576).
 
 **&uarr; Replace this link with the right commit for this exercise**
 

@@ -57,14 +57,14 @@ const TutorialNav = () => (
     <Link to="/" sx={{textDecoration: 'none', color: 'primary'}}>&larr; Go Home</Link>
     <Text sx={headerStyle}>Tutorial Lessons</Text>
     <ul sx={menuStyle}>
-      <li><Link sx={linkStyle} activeClassName='active' to="/part-0"> Set up your development environment</Link></li>
-      <li><Link sx={linkStyle} activeClassName='active' to="/part-1"> Create and deploy your first Gatsby site</Link></li>
-      <li><Link sx={linkStyle} activeClassName='active' to="/part-2"> Use and style React components</Link></li>
-      <li><Link sx={linkStyle} activeClassName='active' to="/part-3"> Add features with plugins</Link></li>
-      <li><Link sx={linkStyle} activeClassName='active' to="/part-4"> Query for data with GraphQL</Link></li>
-      <li><Link sx={linkStyle} activeClassName='active' to="/part-5"> Transform data to use Markdown</Link></li>
-      <li><Link sx={linkStyle} activeClassName='active' to="/part-6"> Create pages programmatically</Link></li>
-      <li><Link sx={linkStyle} activeClassName='active' to="/part-7"> Add dynamic images</Link></li>
+      <li><Link sx={linkStyle} activeClassName='active' to="/part-0">0. Set up your development environment</Link></li>
+      <li><Link sx={linkStyle} activeClassName='active' to="/part-1">1. Create and deploy your first Gatsby site</Link></li>
+      <li><Link sx={linkStyle} activeClassName='active' to="/part-2">2. Use and style React components</Link></li>
+      <li><Link sx={linkStyle} activeClassName='active' to="/part-3">3. Add features with plugins</Link></li>
+      <li><Link sx={linkStyle} activeClassName='active' to="/part-4">4. Query for data with GraphQL</Link></li>
+      <li><Link sx={linkStyle} activeClassName='active' to="/part-5">5. Transform data to use Markdown</Link></li>
+      <li><Link sx={linkStyle} activeClassName='active' to="/part-6">6. Create pages programmatically</Link></li>
+      <li><Link sx={linkStyle} activeClassName='active' to="/part-7">7. Add dynamic images</Link></li>
     </ul>    
   </div>
 )

@@ -23,20 +23,19 @@ By the end of this section, you will be able to:
 
 - Separate sections (labeled by `h3` titles) explaining all the content students will need to be able to complete the exercises.
 
-## Exercise #1: Add some stuff
+## Exercise #1: Use `gatsby-plugin-mdx` to render your blog post contents
 
 ### Goal
 
-A short sentence describing the big picture for what they're doing in this exercise.
-
-- Include instructions for the exercise.
-
-- Add a link to the solution.
+1. Add `gatsby-plugin-mdx` to your site.
+1. Update your `/blog` page to display the contents of each `.mdx` blog post.
 
 <details>
   <summary>Hints</summary>
 
-Include tips to help students if they get stuck. Can include a bullet list or numbered list (if order of steps is important).
+* Remember the three steps for setting up a plugin?
+* Update your page query to use `allMdx` instead.
+* Use the `<MDXRenderer>` component to render the content of your blog posts.
 
 </details>
 
@@ -45,15 +44,14 @@ Include tips to help students if they get stuck. Can include a bullet list or nu
 
 You'll learn more if you work through the exercise on your own.
 
-But if you get stuck, here's [one possible solution](https://github.com/meganesu/gatsby-intro-workshop-example-site/commit/43d66aec890f22019b10d63e7bb36e3a6a354d72).
-
-**&uarr; Replace this link with the right commit for this exercise**
+But if you get stuck, here's [one possible solution](https://github.com/meganesu/gatsby-intro-workshop-example-site/commit/1f4c843cd1c6c8e4eaba9c62d788665c4aa61b63).
 
 </details>
 
 ## Challenge (Extra Credit)
 
-- Ideas for how they can take what they learned in this part a step further
+With MDX, you can use components inside your `.mdx` files. Try adding a component to one of your blog posts.
+
 
 ## Summary
 

@@ -10,19 +10,41 @@ import Calloutbox from "../../components/callout-box";
 
 ## Introduction
 
-- "In the previous section, you learned..." Refresh their knowledge for anything they’ve learned in the previous sections that will be relevant to this part.
-- Brief paragraph (2-3 sentences) to highlight context and relevance.
-- Explain the goal of this part of the tutorial. Show diagrams, list acceptance criteria for desired end result.
+In this section you will learn to use `gatsby-plugin-mdx` to render the content on a screen. 
 
 ## What You Will Learn
 
 By the end of this section, you will be able to:
 
-- Bullet list of learning objectives. Focus on transferable skills. (What are the things they'll be able to apply to a new situation?)
+- Process transform file nodes into MDX nodes by using  `gatsby-plugin-mdx`
+
 
 ## Background
 
-- Separate sections (labeled by `h3` titles) explaining all the content students will need to be able to complete the exercises.
+Right now, even though you can access the File node for your .mdx file, you can’t actually render the contents, because `gatsby-source-filesystem` doesn’t know about how to process MDX. 
+This is why we will need the MDX plugin. 
+
+### How to use MDX Plugin 
+
+1. Install Plugin `npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react`
+2. Add plugin to your plugins list in your `gatsby-config.js`. 
+
+> Note that gatsby-plugin-mdx requires gatsby-source-filesystem to be present and configured to process local markdown files in order to generate the resulting Gatsby nodes.
+```javascript
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog/`,
+      },
+    },
+    `gatsby-plugin-mdx`,
+  ],
+}
+```
+
 
 ## Exercise #1: Use `gatsby-plugin-mdx` to render your blog post contents
 
@@ -56,8 +78,7 @@ With MDX, you can use components inside your `.mdx` files. Try adding a componen
 
 ## Summary
 
-- Bullet list of key takeaways (alt: checks for understanding, using `<details>` elements?)
-- 1-2 sentences teasing how this section connects to the next section (no details, just enough of a hook to motivate them to keep going)
+- `Gatsby-plugin-mdx` transforms file nodes to MDX nodes 
 
 <Calloutbox>
 

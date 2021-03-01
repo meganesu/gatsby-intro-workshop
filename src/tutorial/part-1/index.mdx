@@ -136,9 +136,28 @@ There will be a unique URL for each build (like `https://build-49535320-b3ae-476
 
 Gatsby Cloud now includes hosting! That means that other people will be able to access your site using a URL that ends with `.gatsbyjs.io`.
 
-To set up Gatsby Hosting:
+In order to use Gatsby Hosting, you first need to add the `gatsby-plugin-gatsby-cloud` plugin to your site. (Don't worry about what this means for now. You'll learn more about plugins in a bit.)
 
-1. Go into the "Site Settings" tab for your site.
+1. Run the following command from your terminal to install `gatsby-plugin-gatsby-cloud`:
+    ```shell
+    npm install gatsby-plugin-gatsby-cloud
+    ```
+1. Open up the `gatsby-config.js` file at the root of your project. Update the `plugins` array to look like this:
+    ```javascript
+    plugins: [
+      `gatsby-plugin-gatsby-cloud`,
+    ],
+    ```
+1. Commit your changes and push them to your remote repository on GitHub:
+    ```shell
+    git add .
+    git commit -m "Add plugin for hosting"
+    git push
+    ```
+
+Then, you can set up Gatsby Hosting in your browser:
+
+1. Go to the Gatsby Cloud page for your site, then click into the "Site Settings" tab.
 1. Select "Hosting" from the sidebar.
 1. Find the "Deploy to Gatsby Hosting" section, and click the "Turn on" button.
 

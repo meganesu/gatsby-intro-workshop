@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Intro to Gatsby Workshop - GatsbyConf 2021",
+    title: "Getting Started with Gatsby Workshop - GatsbyConf 2021",
   },
   plugins: [
     {

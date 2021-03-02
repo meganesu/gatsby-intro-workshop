@@ -343,6 +343,24 @@ Then, in your component file, import your styles and apply the individual classe
 ```javascript
 // src/components/my-component.js
 
+import { title } from './layout.module.css'
+
+// In the JSX returned
+<h1 className={title}>
+  Super Sweet Title Page
+</h1>
+```
+
+<details>
+<summary>Using Gatsby v2? Try this instead.</summary>
+
+Gatsby v3 introduced a change to the way Gatsby uses CSS modules.
+
+If you're using v3, you'll import your styles as a single default export, rather than importing each class separately.
+
+```javascript
+// src/components/my-component.js
+
 import styles from './layout.module.css'
 
 // In the JSX returned
@@ -350,6 +368,8 @@ import styles from './layout.module.css'
   Super Sweet Title Page
 </h1>
 ```
+
+</details>
 
 <Calloutbox>
 

@@ -10,39 +10,58 @@ import Calloutbox from "../../components/callout-box";
 
 ## Introduction
 
-In this section you will learn to use `gatsby-plugin-mdx` to render the content on a screen. 
+So far, you've used the `gatsby-source-filesystem` plugin to build a blog page that can list the names of your blog posts. But `gatsby-source-filesystem` doesn't know anything about how to process MDX files, so it doesn't now how to render the actual contents of your posts.
+
+To display your posts, you'll need to learn about a new plugin that knows how to use MDX files: `gatsby-plugin-mdx`.
 
 ## What You Will Learn
 
 By the end of this section, you will be able to:
 
-- Process transform file nodes into MDX nodes by using  `gatsby-plugin-mdx`
-
+- Transform File nodes into MDX nodes by using the `gatsby-plugin-mdx` plugin.
 
 ## Background
 
-Right now, even though you can access the File node for your .mdx file, you can’t actually render the contents, because `gatsby-source-filesystem` doesn’t know about how to process MDX. 
-This is why we will need the MDX plugin. 
+### A Closer Look at Gatsby's GraphQL Data Layer
 
-### How to use MDX Plugin 
+To understand what the `gatsby-plugin-mdx` plugin does, you need to know a bit more about how Gatsby’s GraphQL data layer works.
 
-1. Install Plugin `npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react`
-2. Add plugin to your plugins list in your `gatsby-config.js`. 
+Inside the data layer, information is stored in objects called **nodes**. Different source plugins create different types of nodes, each of which have their own properties. For example, `gatsby-source-filesystem` creates File nodes.
 
-> Note that gatsby-plugin-mdx requires gatsby-source-filesystem to be present and configured to process local markdown files in order to generate the resulting Gatsby nodes.
+Gatsby has a special kind of plugin called a **transformer plugin**, which can convert nodes from one type to another.
+
+The `gatsby-plugin-mdx` plugin transforms File nodes that have the `.mdx` extension into MDX nodes.
+
+![The gatsby-source-filesystem plugin pulls data from your local file system into Gatsby's GraphQL data layer as File nodes. Then the gatsby-plugin-mdx transformer plugin converts those File nodes into MDX nodes. Finally, you can use GraphQL queries to pull data from the MDX nodes into your components.](./data-layer-with-nodes.png)
+
+### Processing MDX with `gatsby-plugin-mdx`
+
+The `gatsby-plugin-mdx` plugin provides some new tools for you to use in your site:
+
+* The `allMdx` and `mdx` fields (for your GraphQL queries)
+* An `MDXRenderer` component (for processing and displaying MDX content)
+
+#### The `allMdx` and `mdx` fields
+
+Adding `gatsby-plugin-mdx` to your site makes the `allMdx` and `mdx` fields available for you to use in your GraphQL queries.
+
+If you open up GraphiQL after configuring `gatsby-plugin-mdx`, you will see that the Explorer now lists `allMdx` and `mdx` among the other fields you had before.
+
+* Use `allMdx` to query for multiple MDX nodes
+* Use `mdx` to query for a specific MDX node. (You'll learn more about that in a later section.)
+
+#### The `MDXRenderer` Component
+
+`gatsby-plugin-mdx` also includes a special component that you can use to render the contents from an MDX file: `MDXRenderer`.
+
+`MDXRenderer` uses the `children` prop, similar to the `Layout` component you created earlier. You can pass in the value of the `body` field from an MDX node.
+
 ```javascript
-module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/blog/`,
-      },
-    },
-    `gatsby-plugin-mdx`,
-  ],
-}
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+
+<MDXRenderer>
+  { node.body }
+</MDXRenderer>
 ```
 
 
@@ -52,6 +71,8 @@ module.exports = {
 
 1. Add `gatsby-plugin-mdx` to your site.
 1. Update your `/blog` page to display the contents of each `.mdx` blog post.
+
+![GATSBY_EMPTY_ALT](./exercise-1-goal.png)
 
 <details>
   <summary>Hints</summary>
@@ -75,10 +96,19 @@ But if you get stuck, here's [one possible solution](https://github.com/meganesu
 
 With MDX, you can use components inside your `.mdx` files. Try adding a component to one of your blog posts.
 
+<details>
+  <summary>Hints</summary>
+
+Need help with the syntax? Check out the Gatsby documentation on [Writing Pages in MDX](https://www.gatsbyjs.com/docs/mdx/writing-pages/).
+
+</details>
 
 ## Summary
 
-- `Gatsby-plugin-mdx` transforms file nodes to MDX nodes 
+The key takeaways from this section are:
+
+- Transformer plugins convert nodes in the data layer from one type to another.
+- `gatsby-plugin-mdx` transforms file nodes to MDX nodes.
 
 <Calloutbox>
 

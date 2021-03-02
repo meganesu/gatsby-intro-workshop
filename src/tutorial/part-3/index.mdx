@@ -38,24 +38,31 @@ You can think of a plugin as an accessory. You don't _need_ to use plugins in yo
 Here's the general process of using a plugin in your site:
 
 1. **Install the plugin using npm.**
-   - In your terminal, run the following command (swapping out `plugin-name` for the name of the plugin you want to use):
-     ```
-     npm install plugin-name
-     ```
-   - Depending on what plugin you're using, there might be more dependencies that you also need to install. Check the specific plugin's README in the plugin library for more details.
+    - In your terminal, run the following command (swapping out `plugin-name` for the name of the plugin you want to use):
+        ```
+        npm install plugin-name
+        ```
+    - Depending on what plugin you're using, there might be more dependencies that you also need to install. Check the specific plugin's README in the plugin library for more details.
 1. **Configure the plugin in your `gatsby-config.js` file.**
-   - Your `gatsby-config.js` file contains information about your site, including configuration for plugins. You can add a plugin to the `plugins` array.
-     ```javascript
-     module.exports = {
-       siteMetadata: {
-         title: "my-cool-blog",
-       },
-       plugins: ["gatsby-plugin-image"],
-     };
-     ```
-   - Some plugins require extra configuration options. In that case, you'll add an object to the `plugins` array (instead of a string). If that's the case, the plugin README will have more details on what that object should look like.
+    - Your `gatsby-config.js` file contains information about your site, including configuration for plugins. You can add a plugin to the `plugins` array.
+        ```javascript
+        module.exports = {
+          siteMetadata: {
+            title: "my-cool-blog",
+          },
+          plugins: ["plugin-name"],
+        };
+        ```
+    - Some plugins require extra configuration options. In that case, you'll add an object to the `plugins` array (instead of a string). If that's the case, the plugin README will have more details on what that object should look like.
+
+    <Calloutbox>
+
+    **Note:** After you make updates to your `gatsby-config.js` file, you'll need to restart your `gatsby develop` process for your changes to be picked up.
+
+    </Calloutbox>
+
 1. **Use the plugin features in your site.**
-   - The specifics of this will be different based on what the plugin does. You might import a component or function from the site. You might not need to do anything else at all. Check the plugin's README for more details.
+    - The specifics of this will be different based on what the plugin does. You might import a component or function from the site. You might not need to do anything else at all. Check the plugin's README for more details.
 
 ![The general process for using a plugin: Install, configure, and use in your site (when needed).](./plugin-process.png)
 

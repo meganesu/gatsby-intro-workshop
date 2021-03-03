@@ -10,7 +10,7 @@ import Calloutbox from "../../components/callout-box";
 
 ## Introduction
 
-In [section 3](/part-3/) you learned about using the `StaticImage` component from `gatsby-plugin-image` plugin. In this section you are going to learn to use the `GatsbyImage` component which
+In [section 3](/part-3/) you learned about using the `StaticImage` component from `gatsby-plugin-image` plugin. In this section, you are going to learn to use the `GatsbyImage` component which
 allows you to load dynamic images into your components while optimizing with specific options and formats
 
 ## What You Will Learn
@@ -18,11 +18,11 @@ allows you to load dynamic images into your components while optimizing with spe
 By the end of this section, you will be able to:
 
 - Change size and Layout of images using `gatsbyImageData` resolver arguments
-- Lazy load images to components 
+- Lazy load images to components
 
 ## Background
 
-### What are dynamic images 
+### What are dynamic images
 
 You can think of dynamic images as images that come from a data source (such as a CMS) or in this case your MDX files. You can load them via GraphQL and display them using the GatsbyImage component.
 
@@ -33,36 +33,36 @@ You can think of dynamic images as images that come from a data source (such as 
 2. Configure `gatsbyImageData` with arguments: There are a couple of arguments accepted by the `gatsbyImageData` resolver like, format, placeholder. There are also advanced image processing options available
    In Graphiql you can select these options
 
-![](./image-parameter-query.png) 
+![](./image-parameter-query.png)
 
-They you will have the query below. 
+You will have the query below.
 
 ```graphql
- query($slug: String) {
-    mdx(slug: { eq: $slug }) {
-      frontmatter {
-        date(formatString: "MM DD YYYY")
-        title
-        hero_image {
-          childImageSharp {
-            gatsbyImageData(
-              formats: [JPG, WEBP, AVIF]
-              placeholder: TRACED_SVG
-              avifOptions: { speed: 10 }
-            )
-          }
+query($slug: String) {
+  mdx(slug: { eq: $slug }) {
+    frontmatter {
+      date(formatString: "MM DD YYYY")
+      title
+      hero_image {
+        childImageSharp {
+          gatsbyImageData(
+            formats: [JPG, WEBP, AVIF]
+            placeholder: TRACED_SVG
+            avifOptions: { speed: 10 }
+          )
         }
       }
-      slug
-      body
     }
+    slug
+    body
   }
-
+}
 ```
+
 3. Display the image
 
 To display the image on the screen you will want to `import { GatsbyImage, getImage } from "gatsby-plugin-image"`.
-The `getImage()` function is an optional helper to make your code easier to read. We use 
+The `getImage()` function is an optional helper to make your code easier to read. We use
 
 ```javascript
 const BlogPosts = ({ data }) => {
@@ -74,9 +74,7 @@ const BlogPosts = ({ data }) => {
     </Layout>
   );
 };
-
 ```
-
 
 ## Exercise #1: Add a dynamic hero image to each blog post
 
@@ -91,29 +89,28 @@ Use the dynamic `<GatsbyImage>` component from `gatsby-plugin-image` to add a he
 </Calloutbox>
 
 <details>
-  <summary>Hints</summary>
+ <summary>Hints</summary>
 
 1. Download a hero image for each blog post, and put them in your `/blog` folder.
 1. Create a new field in the front matter for each `.mdx` file with the relative path to the hero image.
 1. Use the `<GatsbyImage>` component and `getImage()` function to render the hero image in your blog post template.
-  
+
 </details>
 
 <details>
-  <summary>Solution</summary>
+ <summary>Solution</summary>
 
 You'll learn more if you work through the exercise on your own.
 
 But if you get stuck, here's [one possible solution](https://github.com/meganesu/gatsby-intro-workshop-example-site-with-v3/compare/part6-exercise1...part7-exercise1).
 
-
 </details>
-
 
 ## Summary
 
 The key takeaways from this section are:
-- GatsbyImage resolver gives parameter that allow you to pick formats for your dynamic image, also the placehoder effects can be : Blurry, dominant color or TRACED_SVG
+
+- GatsbyImage resolver gives a parameter that allows you to pick formats for your dynamic image, also the placehoder effects can be: Blurry, dominant color or TRACED_SVG
 - The `getImage()` function is an optional helper to make your code easier to read.
 
 <Calloutbox>

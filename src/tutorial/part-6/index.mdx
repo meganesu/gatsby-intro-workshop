@@ -41,7 +41,7 @@ To use the File System Route API, because the pages you want to create will be a
 
 Use curly braces `({ })` in your filename to tell Gatsby that the content of this page is dynamic. So `src/pages/products/{Product.name}.js` will generate a route like `/products/burger`. You can implement your own version in these steps:
 
-1. Create a folder called `blog` inside the folder create a file `{mdx.slug}`
+1. Under the pages directory create a folder called `blog` inside the folder create a file `{mdx.slug}.js`
 2. Write a query for a single page using query variables and Graphiql
     - In Graphiql if you write a query to get back all the slugs as seen below because this is a way to differentiate one page from another
     
